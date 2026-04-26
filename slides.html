@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CX.ia - Apresentação Institucional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #0f172a; /* bg-slate-900 */
+            overflow: hidden; /* Evita rolagem na janela principal */
+        }
+        .gradient-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .donut-chart { transition: transform 0.3s ease; }
+        .donut-chart:hover { transform: scale(1.05); }
+        
+        /* Ajuste de imagens de perfil */
+        .vr-profile { background-image: url(https://raw.githubusercontent.com/U-ell/cx-ia/refs/heads/main/assets/vr.png); background-size: cover; background-position: center;}
+        .wn-profile { background-image: url(https://raw.githubusercontent.com/U-ell/cx-ia/refs/heads/main/assets/wn.jfif); background-size: cover; background-position: center;}
+        
+        /* Custom Scrollbar para os slides individuais */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        /* Oculta scrollbar onde não é necessário visualmente mas permite rolagem */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+	.h-screen-92 { height: 100vh;}
+    </style>
+</head>
+<body class="text-slate-800 antialiased h-screen w-screen relative">
+
+    <div class="fixed top-6 left-6 lg:left-8 z-50 flex items-center gap-2">
+        <div class="w-10 h-10 bg-lime-400 rounded-xl flex items-center justify-center text-slate-900 font-black text-xl shadow-lg shadow-lime-200/20">
+            CX
+        </div>
+        <span class="font-extrabold text-2xl tracking-tight text-white drop-shadow-md">.ia</span>
+    </div>
+
+    <div id="slider-container" class="flex transition-transform duration-700 ease-in-out h-full w-full">
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-y-auto hide-scrollbar pt-20 pb-24">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-lime-400/10 blur-[120px] rounded-full pointer-events-none"></div>
+            
+            <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-lime-400 border border-lime-400/30 rounded-full uppercase shadow-lg shadow-lime-400/10">
+                    O Futuro do Atendimento
+                </span>
+                <h1 class="text-5xl lg:text-7xl font-black text-white tracking-tight mb-6 leading-tight">
+                    Como construímos <br>
+                    <span class="bg-gradient-to-r from-lime-300 to-lime-500 gradient-text">Experiências?</span>
+                </h1>
+                <p class="text-2xl text-slate-300 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+                    Automatizamos sua operação com uma <strong class="text-white font-semibold">Inteligência Artificial compatível com o seu cliente.</strong>
+                </p>
+                <div class="inline-flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm text-slate-300">
+                    <svg class="w-5 h-5 text-lime-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <span>Reduza gastos e eleve a qualidade.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-slate-50 overflow-y-auto pt-20 pb-24 relative">
+            <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+            
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center text-lime-400 mb-6 shadow-xl">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">Plataforma de <br>Atendimento</h2>
+                        <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                            Disponibilizamos uma plataforma de atendimento completa. As IAs que administramos acompanham sistemas de chats de forma fluida.
+                        </p>
+                        
+                        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-lime-100 flex items-center justify-center flex-shrink-0 text-lime-600 mt-1">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900 mb-2">Redução de Gastos</h4>
+                                <p class="text-slate-500">Trata-se de um serviço extra e opcional, focado estrategicamente em reduzir os gastos gerais da sua operação.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 relative">
+                        <div class="flex gap-2 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                            <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                            <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-8 bg-slate-800 rounded-lg w-3/4"></div>
+                            <div class="h-24 bg-slate-800 rounded-xl w-full border border-slate-700/50 flex items-center px-6">
+                                <div class="w-10 h-10 bg-lime-400 rounded-full mr-4 flex-shrink-0"></div>
+                                <div class="space-y-2 w-full">
+                                    <div class="h-3 bg-slate-700 rounded-full w-1/3"></div>
+                                    <div class="h-3 bg-slate-700 rounded-full w-4/5"></div>
+                                </div>
+                            </div>
+                            <div class="h-24 bg-slate-800 rounded-xl w-full border border-slate-700/50 flex items-center px-6">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full mr-4 flex-shrink-0"></div>
+                                <div class="space-y-2 w-full">
+                                    <div class="h-3 bg-slate-700 rounded-full w-1/4"></div>
+                                    <div class="h-3 bg-slate-700 rounded-full w-2/3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-white overflow-y-auto pt-20 pb-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Como a CX.ia pode ajudar o seu cliente?</h2>
+                    <p class="text-slate-500 text-lg">Nossas inteligências não são apenas bots comuns. Elas têm personalidade, conhecimento e foco na resolução.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                        <div class="w-10 h-10 bg-lime-100 text-lime-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Personalidade</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Defina o tom de voz, humor e características únicas.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                        <div class="w-10 h-10 bg-lime-100 text-lime-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Eficiência</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Capacidade robusta de lidar com inúmeros clientes simultaneamente.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                        <div class="w-10 h-10 bg-lime-100 text-lime-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Conhecimento</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Utiliza seus materiais já prontos e conta com nosso suporte especializado.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                        <div class="w-10 h-10 bg-lime-100 text-lime-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Empenho 24/7</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Atendimento contínuo 24 horas por dia, 7 dias por semana.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                        <div class="w-10 h-10 bg-lime-100 text-lime-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Otimização</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Sugestões de melhorias e dicas durante o atendimento humano.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                        <div class="w-10 h-10 bg-lime-100 text-lime-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Acompanhamento</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Relatórios detalhados de desempenho da IA e da equipe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-slate-100 overflow-y-auto pt-20 pb-24">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8 w-full">
+                <div class="bg-white rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
+                    <div class="p-8 pb-0 text-center">
+                        <span class="inline-block px-4 py-1.5 mb-4 text-xs font-extrabold tracking-widest text-lime-700 bg-lime-100 rounded-full uppercase">
+                            Case de Sucesso
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+                            Impacto da IA em Fluxos Críticos
+                        </h2>
+                        <p class="mt-2 text-slate-500 font-medium">
+                            Resultados consolidados em apenas 6 meses de operação.
+                        </p>
+                    </div>
+
+                    <div class="mx-6 md:mx-12 mt-6 mb-8 p-8 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl shadow-lg relative overflow-hidden group">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-lime-400/20 rounded-full blur-3xl group-hover:bg-lime-400/30 transition-colors"></div>
+                        <div class="relative z-10 text-center flex flex-col items-center justify-center gap-2">
+                            <div class="text-6xl md:text-7xl font-black text-white tracking-tighter">
+                                55.491
+                            </div>
+                            <div class="text-lg text-slate-300 font-medium">
+                                Tickets resolvidos <span class="text-lime-400 font-bold">sem intervenção humana</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-6 md:px-12 pb-8">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="flex flex-col items-center p-6 bg-slate-50 rounded-3xl border border-transparent hover:border-lime-200 transition-all shadow-sm">
+                                <h4 class="text-slate-800 font-bold mb-4 text-center text-sm">Dados Cadastrais</h4>
+                                <div class="donut-chart relative w-24 h-24 rounded-full flex items-center justify-center shadow-inner" style="background: conic-gradient(#a3e635 56.5%, #e2e8f0 0);">
+                                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                        <span class="text-lg font-black text-slate-800">56.5<small class="text-xs">%</small></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col items-center p-6 bg-slate-50 rounded-3xl border border-transparent hover:border-lime-200 transition-all shadow-sm">
+                                <h4 class="text-slate-800 font-bold mb-4 text-center text-sm">Saques e Depósitos</h4>
+                                <div class="donut-chart relative w-24 h-24 rounded-full flex items-center justify-center shadow-inner" style="background: conic-gradient(#a3e635 60.5%, #e2e8f0 0);">
+                                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                        <span class="text-lg font-black text-slate-800">60.5<small class="text-xs">%</small></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col items-center p-6 bg-slate-50 rounded-3xl border border-transparent hover:border-lime-200 transition-all shadow-sm">
+                                <h4 class="text-slate-800 font-bold mb-4 text-center text-sm">Validação Biométrica</h4>
+                                <div class="donut-chart relative w-24 h-24 rounded-full flex items-center justify-center shadow-inner" style="background: conic-gradient(#a3e635 61.7%, #e2e8f0 0);">
+                                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                        <span class="text-lg font-black text-slate-800">61.7<small class="text-xs">%</small></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-slate-900 text-white overflow-y-auto pt-20 pb-24 relative">
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50 z-0 pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-lime-400 font-bold tracking-widest uppercase text-xs mb-3 block">CX.ia Seu Guia em Tempo Real</span>
+                        <h2 class="text-4xl font-extrabold mb-4">Conheça o Copiloto</h2>
+                        <p class="text-slate-400 text-base mb-6 leading-relaxed">
+                            Diferente de um bot comum, o Copiloto é uma inteligência focada no <strong>atendente humano</strong>. Atua como mentor em tempo real, fornecendo ferramentas para que o operador seja rápido e preciso.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-lime-400/10 flex items-center justify-center flex-shrink-0 text-lime-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-1">Transbordo Inteligente</h4>
+                                    <p class="text-slate-400 text-sm">Resumo da conversa com a IA e orientações de próximos passos para o humano.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-lime-400/10 flex items-center justify-center flex-shrink-0 text-lime-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-1">Guia para Novos Membros</h4>
+                                    <p class="text-slate-400 text-sm">Apoio para novos operadores guiando nos procedimentos internos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-3xl p-6 shadow-2xl border border-slate-700">
+                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-slate-700">
+                            <div class="flex gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <span class="ml-2 text-xs font-semibold text-slate-400 uppercase">Ambiente do Operador</span>
+                        </div>
+
+                        <div class="space-y-4 mb-4">
+                            <div class="flex gap-3 items-end">
+                                <div class="w-8 h-8 rounded-full bg-slate-600 flex items-center justify-center text-xs font-bold text-white">CLI</div>
+                                <div class="bg-slate-700 text-slate-200 px-4 py-2 rounded-2xl rounded-bl-none text-sm max-w-[80%]">
+                                    Oi, preciso trocar a cor do produto pedido 98765, dá tempo?
+                                </div>
+                            </div>
+                            <div class="flex gap-3 items-end flex-row-reverse">
+                                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-xs font-bold text-white">OP</div>
+                                <div class="bg-blue-600 text-white px-4 py-2 rounded-2xl rounded-br-none text-sm max-w-[80%]">
+                                    Claro, Maria! Vou verificar o pedido e conferir a cor.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-lime-900/30 border border-lime-500/30 rounded-2xl p-4 mb-3">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-5 h-5 rounded bg-lime-500 flex items-center justify-center text-slate-900">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <span class="text-lime-400 font-bold text-xs">Sugestão do Copiloto</span>
+                            </div>
+                            <p class="text-slate-300 text-xs italic mb-3">
+                                "Excelente, Maria. Já localizei o pedido 98765. Vou verificar a disponibilidade..."
+                            </p>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-lime-500 text-slate-900 rounded-lg text-[10px] font-bold">Aplicar</button>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-orange-900/20 border border-orange-500/20 rounded-2xl p-3">
+                            <span class="text-orange-400 font-bold text-[10px] uppercase block mb-1">Lembrete</span>
+                            <p class="text-slate-400 text-xs">Confirmar identidade antes de alterar dados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-white overflow-y-auto pt-20 pb-24">
+            <div class="max-w-3xl mx-auto px-6 text-center">
+                <div class="w-24 h-24 bg-slate-100 rounded-3xl mx-auto flex items-center justify-center mb-8 rotate-3 shadow-sm border border-slate-200">
+                    <svg class="w-12 h-12 text-lime-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </div>
+                <h2 class="text-4xl font-bold text-slate-900 mb-6">Integrações (API)</h2>
+                <p class="text-xl text-slate-600 leading-relaxed">
+                    A integração serve para apoiar a inteligência artificial com uma base de conhecimento completa sobre a sua plataforma. Com o nível tecnológico adequado, a IA pode transmitir informações do sistema, consultar planilhas ou realizar qualquer outra funcionalidade necessária via API.
+                </p>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen-92 flex-shrink-0 flex flex-col justify-between bg-slate-50 overflow-y-auto pt-5">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8 flex-grow flex flex-col justify-center w-full">
+                <div class="text-center mb-8">
+                    <h2 class="text-4xl font-bold text-slate-900 mb-4">Quem Somos?</h2>
+                    <p class="text-slate-500 text-lg max-w-2xl mx-auto">Com valores e objetivos em comum, buscamos proporcionar aos nossos parceiros uma experiência aprimorada para seus clientes.</p>
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-center gap-12 md:gap-20">
+                    <div class="text-center group">
+                        <div class="w-36 h-36 mx-auto rounded-full bg-slate-200 mb-4 overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform vr-profile">
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Vitor Romero</h3>
+                        <p class="text-lime-600 font-semibold text-sm mt-1">Especialista em CX</p>
+                    </div>
+
+                    <div class="text-center group">
+                        <div class="w-36 h-36 mx-auto rounded-full bg-slate-200 mb-4 overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform wn-profile">
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Wel Nunes</h3>
+                        <p class="text-lime-600 font-semibold text-sm mt-1">Gerente de Projetos/Produtos CX</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="bg-slate-900 py-16 border-t border-slate-800 text-center w-full flex-shrink-0">
+                <h2 class="text-2xl font-bold text-white mb-6">Pronto para transformar seu atendimento?</h2>
+                <button class="px-8 py-3 bg-lime-400 text-slate-900 font-bold rounded-full hover:bg-lime-300 transition-transform hover:scale-105 shadow-lg mb-4">
+                    Iniciar Parceria
+                </button>
+                <p class="text-slate-500 text-xs pb-2">© 2026 CX.ia. Todos os direitos reservados.</p>
+            </footer>
+        </section>
+
+    </div>
+
+    <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-slate-900/80 backdrop-blur-md px-6 py-3 rounded-full border border-slate-700/50 shadow-2xl z-50">
+        <button id="prevBtn" class="text-slate-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        
+        <div id="dots-container" class="flex gap-2">
+            </div>
+
+        <button id="nextBtn" class="text-slate-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('slider-container');
+            const slides = document.querySelectorAll('#slider-container > section');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dotsContainer = document.getElementById('dots-container');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            // Gera as bolinhas indicadoras
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === 0 ? 'bg-lime-400 w-6' : 'bg-slate-600 hover:bg-slate-500'}`;
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+            const dots = dotsContainer.querySelectorAll('button');
+
+            function updateUI() {
+                // Translada o contêiner (100vw por slide)
+                slider.style.transform = `translateX(-${currentSlide * 100}vw)`;
+                
+                // Atualiza estado dos botões
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === totalSlides - 1;
+
+                // Atualiza as bolinhas indicadoras
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.className = 'w-6 h-2.5 rounded-full bg-lime-400 transition-all duration-300';
+                    } else {
+                        dot.className = 'w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500 transition-all duration-300';
+                    }
+                });
+            }
+
+            function goToSlide(index) {
+                if (index >= 0 && index < totalSlides) {
+                    currentSlide = index;
+                    updateUI();
+                }
+            }
+
+            // Eventos de clique nos botões
+            prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+            // Navegação por teclado (Setas)
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    goToSlide(currentSlide + 1);
+                } else if (e.key === 'ArrowLeft') {
+                    goToSlide(currentSlide - 1);
+                }
+            });
+
+            // Inicialização
+            updateUI();
+        });
+    </script>
+</body>
+</html>
