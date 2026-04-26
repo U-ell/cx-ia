@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CX.ia - Construindo Experiências</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .gradient-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .donut-chart { transition: transform 0.3s ease; }
+        .donut-chart:hover { transform: scale(1.05); }
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+	.vr-profile { background-image: url(https://media.licdn.com/dms/image/v2/D4E03AQGS2Sf9xNTrtg/profile-displayphoto-scale_400_400/B4EZk5qyoKKYAk-/0/1757609146690?e=1778716800&v=beta&t=WqjXfRkauBXPfSIpDKpNyEsufpLRdlr98TN8ZO3Zbe8);background-size: contain;}
+	.wn-profile { background-image: url(https://media.licdn.com/dms/image/v2/D4D03AQEuw7ScR7wYSg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720732980209?e=1778716800&v=beta&t=bR4ai5eYXtmjLRPcautfAd2sDccRbn1aSpFMQhgU8uQ);background-size: contain;}
+    </style>
+</head>
+<body class="text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-100 transition-all">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-lime-400 rounded-xl flex items-center justify-center text-slate-900 font-black text-xl shadow-lg shadow-lime-200">
+                    CX
+                </div>
+                <span class="font-extrabold text-2xl tracking-tight text-slate-900">.ia</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
+                <a href="#solucao" class="hover:text-lime-600 transition-colors">A Solução</a>
+                <a href="#beneficios" class="hover:text-lime-600 transition-colors">Benefícios</a>
+                <a href="#cases" class="hover:text-lime-600 transition-colors">Cases de Sucesso</a>
+                <a href="#copiloto" class="hover:text-lime-600 transition-colors">Copiloto</a>
+            </div>
+            <a href="#contato" class="px-5 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-full hover:bg-slate-800 transition-all shadow-md">
+                Fale Conosco
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 -z-10"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-lime-400/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center fade-in-up">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-lime-400 border border-lime-400/30 rounded-full uppercase">
+                O Futuro do Atendimento
+            </span>
+            <h1 class="text-5xl lg:text-7xl font-black text-white tracking-tight mb-8 leading-tight">
+                Construindo <br>
+                <span class="bg-gradient-to-r from-lime-300 to-lime-500 gradient-text">Experiências.</span>
+            </h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Automatizamos sua operação com Inteligência Artificial compatível com o seu cliente. Reduza gastos e eleve a qualidade do seu atendimento.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#cases" class="px-8 py-4 bg-lime-400 text-slate-900 font-bold rounded-full hover:bg-lime-300 transition-transform hover:scale-105 shadow-lg shadow-lime-400/20">
+                    Ver Resultados Reais
+                </a>
+                <a href="#copiloto" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-colors backdrop-blur-sm border border-white/10">
+                    Conheça o Copiloto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Ajudamos (Features) -->
+    <section id="beneficios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Como a CX.ia pode ajudar o seu cliente?</h2>
+                <p class="text-slate-500 text-lg">Nossas inteligências não são apenas bots comuns. Elas têm personalidade, conhecimento e foco na resolução.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Personalidade -->
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                    <div class="w-12 h-12 bg-lime-100 text-lime-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Personalidade</h3>
+                    <p class="text-slate-600 leading-relaxed">Defina o tom de voz, humor e características únicas para que a IA represente perfeitamente a sua marca.</p>
+                </div>
+
+                <!-- Eficiência -->
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                    <div class="w-12 h-12 bg-lime-100 text-lime-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Eficiência</h3>
+                    <p class="text-slate-600 leading-relaxed">Capacidade robusta de lidar com inúmeros clientes simultaneamente, sem filas ou espera.</p>
+                </div>
+
+                <!-- Conhecimento -->
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                    <div class="w-12 h-12 bg-lime-100 text-lime-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Conhecimento</h3>
+                    <p class="text-slate-600 leading-relaxed">Utiliza seus materiais já prontos e conta com nosso suporte especializado para alimentação contínua de dados.</p>
+                </div>
+
+                <!-- Empenho -->
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                    <div class="w-12 h-12 bg-lime-100 text-lime-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Empenho 24/7</h3>
+                    <p class="text-slate-600 leading-relaxed">Sua operação não dorme. Atendimento contínuo 24 horas por dia, 7 dias por semana, sem interrupções.</p>
+                </div>
+
+                <!-- Otimização -->
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                    <div class="w-12 h-12 bg-lime-100 text-lime-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Otimização</h3>
+                    <p class="text-slate-600 leading-relaxed">Durante o atendimento, a IA pode sugerir melhorias de mensagens e dicas de como o operador deve prosseguir.</p>
+                </div>
+
+                <!-- Acompanhamento -->
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors group">
+                    <div class="w-12 h-12 bg-lime-100 text-lime-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Acompanhamento</h3>
+                    <p class="text-slate-600 leading-relaxed">Receba relatórios detalhados de desempenho sobre a atuação da IA e sobre a eficiência da sua equipe de operadores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case de Sucesso (Dashboard Integrado) -->
+    <section id="cases" class="py-24 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="w-full bg-white rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
+                <div class="p-8 md:p-12 pb-0 text-center">
+                    <span class="inline-block px-4 py-1.5 mb-4 text-xs font-extrabold tracking-widest text-lime-700 bg-lime-100 rounded-full uppercase">
+                        Case de Sucesso
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Impacto da IA em Fluxos Críticos
+                    </h2>
+                    <p class="mt-4 text-slate-500 font-medium text-lg">
+                        Resultados consolidados em apenas 6 meses de operação.
+                    </p>
+                </div>
+
+                <div class="mx-6 md:mx-12 mt-10 mb-12 p-8 md:p-12 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl shadow-lg relative overflow-hidden group">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-lime-400/20 rounded-full blur-3xl group-hover:bg-lime-400/30 transition-colors"></div>
+                    <div class="relative z-10 text-center">
+                        <div class="text-6xl md:text-8xl font-black text-white tracking-tighter mb-4">
+                            55.491
+                        </div>
+                        <div class="text-xl md:text-2xl text-slate-300 font-medium">
+                            Tickets resolvidos <span class="text-lime-400 font-bold">sem intervenção humana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-6 md:px-12 pb-12">
+                    <div class="flex items-center justify-between mb-10">
+                        <div class="h-px bg-slate-200 flex-grow"></div>
+                        <span class="px-4 text-sm font-bold text-slate-400 uppercase tracking-widest">Taxa de Retenção por Fluxo</span>
+                        <div class="h-px bg-slate-200 flex-grow"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                        <!-- Card 1 -->
+                        <div class="flex flex-col items-center p-8 bg-slate-50 rounded-3xl border border-transparent hover:border-lime-200 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-lg">
+                            <h4 class="text-slate-800 font-bold mb-8 text-center text-lg h-12 flex items-center">Dados Cadastrais</h4>
+                            <div class="donut-chart relative w-36 h-36 rounded-full flex items-center justify-center shadow-inner" style="background: conic-gradient(#a3e635 56.5%, #e2e8f0 0);">
+                                <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                    <span class="text-3xl font-black text-slate-800">56.5<small class="text-base font-bold ml-0.5">%</small></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flex flex-col items-center p-8 bg-slate-50 rounded-3xl border border-transparent hover:border-lime-200 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-lg">
+                            <h4 class="text-slate-800 font-bold mb-8 text-center text-lg h-12 flex items-center">Saques e Depósitos</h4>
+                            <div class="donut-chart relative w-36 h-36 rounded-full flex items-center justify-center shadow-inner" style="background: conic-gradient(#a3e635 60.5%, #e2e8f0 0);">
+                                <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                    <span class="text-3xl font-black text-slate-800">60.5<small class="text-base font-bold ml-0.5">%</small></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="flex flex-col items-center p-8 bg-slate-50 rounded-3xl border border-transparent hover:border-lime-200 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-lg">
+                            <h4 class="text-slate-800 font-bold mb-8 text-center text-lg h-12 flex items-center">Validação de Biometria</h4>
+                            <div class="donut-chart relative w-36 h-36 rounded-full flex items-center justify-center shadow-inner" style="background: conic-gradient(#a3e635 61.7%, #e2e8f0 0);">
+                                <div class="w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                    <span class="text-3xl font-black text-slate-800">61.7<small class="text-base font-bold ml-0.5">%</small></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copiloto & Transbordo Section -->
+    <section id="copiloto" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50 z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div>
+                    <span class="text-lime-400 font-bold tracking-widest uppercase text-sm mb-4 block">CX.ia Seu Guia em Tempo Real</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold mb-6">Conheça o Copiloto</h2>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        Diferente de um bot comum que apenas responde ao cliente, o Copiloto é uma inteligência de apoio lateral focada no <strong>atendente humano</strong>. Ele atua como um mentor em tempo real, analisando a conversa e fornecendo ferramentas para que o operador seja mais rápido, preciso e empático.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-lime-400/10 flex items-center justify-center flex-shrink-0 text-lime-400 mt-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Transbordo Inteligente</h4>
+                                <p class="text-slate-400">A tecnologia de transbordo oferece um resumo de tudo que a IA conversou com o cliente antes de passar para o humano, incluindo orientações de próximos passos.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-lime-400/10 flex items-center justify-center flex-shrink-0 text-lime-400 mt-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Guia para Novos Membros</h4>
+                                <p class="text-slate-400">Excelente apoio para operadores recém-chegados. Conhecendo os procedimentos, a IA atua como guia nos processos internos da empresa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simulação de Interface do Copiloto -->
+                <div class="bg-slate-800 rounded-3xl p-6 shadow-2xl border border-slate-700 relative">
+                    <!-- Decorativo Chat Header -->
+                    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-700">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="ml-4 text-xs font-semibold text-slate-400 uppercase">Ambiente do Operador</span>
+                    </div>
+
+                    <!-- Chat Mockup -->
+                    <div class="space-y-4 mb-6">
+                        <div class="flex gap-3 items-end">
+                            <div class="w-8 h-8 rounded-full bg-slate-600 flex items-center justify-center text-xs font-bold text-white">CLI</div>
+                            <div class="bg-slate-700 text-slate-200 px-4 py-2 rounded-2xl rounded-bl-none text-sm max-w-[80%]">
+                                Oi, preciso de ajuda com meu pedido. Queria trocar a cor do produto, dá tempo? É o pedido 98765.
+                            </div>
+                        </div>
+                        <div class="flex gap-3 items-end flex-row-reverse">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-xs font-bold text-white">OP</div>
+                            <div class="bg-blue-600 text-white px-4 py-2 rounded-2xl rounded-br-none text-sm max-w-[80%]">
+                                Claro, Maria! Vou verificar o pedido 98765 e conferir a cor, um momento.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Copiloto Widget Mockup -->
+                    <div class="bg-lime-900/30 border border-lime-500/30 rounded-2xl p-4">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="w-6 h-6 rounded-md bg-lime-500 flex items-center justify-center text-slate-900">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <span class="text-lime-400 font-bold text-sm">Sugestão do Copiloto</span>
+                        </div>
+                        <p class="text-slate-300 text-sm italic mb-4">
+                            "Excelente, Maria. Já localizei o pedido 98765. Vou verificar a disponibilidade e a política de troca de cor para você agora mesmo. Aguarde um instante."
+                        </p>
+                        <div class="flex gap-2">
+                            <button class="px-3 py-1.5 bg-lime-500 text-slate-900 rounded-lg text-xs font-bold hover:bg-lime-400 transition-colors">Aplicar Sugestão</button>
+                            <button class="px-3 py-1.5 bg-slate-700 text-white rounded-lg text-xs font-bold hover:bg-slate-600 transition-colors">Ignorar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Lembrete Mockup -->
+                    <div class="mt-4 bg-orange-900/20 border border-orange-500/20 rounded-2xl p-4">
+                        <span class="text-orange-400 font-bold text-xs uppercase block mb-1">Lembrete de Procedimento</span>
+                        <p class="text-slate-400 text-xs">SEMPRE confirmar identidade do cliente antes de alterar dados. Registrar a solicitação no sistema ERP.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrações -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="w-20 h-20 bg-slate-100 rounded-3xl mx-auto flex items-center justify-center mb-8 rotate-3">
+                <svg class="w-10 h-10 text-slate-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Integrações (API)</h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-10">
+                A integração serve para apoiar a inteligência artificial com uma base de conhecimento completa sobre a sua plataforma. Com o nível tecnológico adequado, a IA pode transmitir informações do sistema, consultar planilhas ou realizar qualquer outra funcionalidade necessária via API.
+            </p>
+        </div>
+    </section>
+
+    <!-- Equipe / Quem Somos -->
+    <section class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Quem Somos?</h2>
+                <p class="text-slate-500 text-lg">Com sonhos e objetivos em comum, buscamos proporcionar aos nossos parceiros uma experiência aprimorada para seus clientes.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
+                <div class="text-center group">
+                    <div class="w-40 h-40 mx-auto rounded-full bg-slate-200 mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform">
+                        <!-- Placeholder avatar, in a real page use actual img -->
+                        <div class="w-full h-full bg-slate-300 flex items-center justify-center text-4xl text-slate-500 font-bold vr-profile"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Vitor Romero</h3>
+                    <p class="text-lime-600 font-semibold mt-1">Especialista em CX</p>
+                </div>
+
+                <div class="text-center group">
+                    <div class="w-40 h-40 mx-auto rounded-full bg-slate-200 mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-slate-300 flex items-center justify-center text-4xl text-slate-500 font-bold wn-profile"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Wel Nunes</h3>
+                    <p class="text-lime-600 font-semibold mt-1">Gerente de Projetos e Produtos de CX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="bg-slate-900 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="w-8 h-8 bg-lime-400 rounded-lg flex items-center justify-center text-slate-900 font-black text-sm">
+                    CX
+                </div>
+                <span class="font-extrabold text-xl tracking-tight text-white">.ia</span>
+            </div>
+            <h2 class="text-2xl font-bold text-white mb-8">Obrigado!</h2>
+            <div class="flex justify-center gap-4">
+                <button class="px-8 py-4 bg-lime-400 text-slate-900 font-bold rounded-full hover:bg-lime-300 transition-colors">Iniciar Parceria</button>
+            </div>
+            <p class="text-slate-500 mt-16 text-sm">© 2026 CX.ia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
