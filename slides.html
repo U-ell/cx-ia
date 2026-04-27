@@ -332,6 +332,63 @@
             </div>
         </section>
 
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-slate-800 text-white overflow-y-auto pt-20 pb-24 relative">
+            <div class="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:24px_24px] opacity-20"></div>
+            <div class="max-w-5xl mx-auto px-6 w-full relative z-10">
+                <div class="text-center mb-10">
+                    <span class="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-lime-400 border border-lime-400/30 rounded-full uppercase">
+                        Ferramenta Interativa
+                    </span>
+                    <h2 class="text-4xl lg:text-5xl font-black text-white mb-4">Calculadora de ROI</h2>
+                    <p class="text-xl text-slate-400 max-w-2xl mx-auto font-light">Descubra o potencial de economia e redução de custos da sua operação.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                    <div class="bg-slate-900 p-8 rounded-[2rem] border border-slate-700 shadow-2xl flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-white mb-6">Suas Variáveis</h3>
+                        <div class="space-y-5">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-400 mb-2">S: Salário Bruto + Encargos (R$)</label>
+                                <input type="number" id="calc-s" class="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white font-medium focus:outline-none focus:border-lime-400 transition-colors" placeholder="Ex: 3500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-400 mb-2">N: Número de Atendentes</label>
+                                <input type="number" id="calc-n" class="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white font-medium focus:outline-none focus:border-lime-400 transition-colors" placeholder="Ex: 10">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-400 mb-2">V: Volume Mensal de Tickets</label>
+                                <input type="number" id="calc-v" class="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white font-medium focus:outline-none focus:border-lime-400 transition-colors" placeholder="Ex: 8000">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-400 mb-2">C: Taxa de Contenção IA (%)</label>
+                                <input type="number" id="calc-c" value="35" class="w-full bg-slate-800 border border-slate-600 rounded-xl px-4 py-3 text-white font-medium focus:outline-none focus:border-lime-400 transition-colors">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-lime-400 to-lime-600 p-8 rounded-[2rem] shadow-2xl text-slate-900 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-white/20 rounded-full blur-3xl pointer-events-none"></div>
+                        <h3 class="text-2xl font-black mb-8">Projeção de Impacto</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white/30 backdrop-blur-sm p-5 rounded-2xl border border-white/20">
+                                <span class="block text-sm font-bold uppercase opacity-80 mb-1">Custo por Ticket (Humano)</span>
+                                <span class="text-4xl font-black tracking-tight" id="res-cpt">R$ 0,00</span>
+                            </div>
+                            <div class="bg-white/30 backdrop-blur-sm p-5 rounded-2xl border border-white/20">
+                                <span class="block text-sm font-bold uppercase opacity-80 mb-1">Tickets Contidos pela IA</span>
+                                <span class="text-4xl font-black tracking-tight" id="res-tickets-ia">0</span>
+                            </div>
+                            <div class="bg-slate-900 p-5 rounded-2xl text-white shadow-lg mt-2">
+                                <span class="block text-sm font-bold text-lime-400 uppercase mb-1">Valor Operacional Preservado</span>
+                                <span class="text-4xl font-black tracking-tight" id="res-economia">R$ 0,00</span>
+                                <p class="text-xs text-slate-400 mt-2 font-medium">*Equivalente ao esforço financeiro automatizado pela IA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="w-screen h-screen-92 flex-shrink-0 flex flex-col justify-between bg-slate-50 overflow-y-auto pt-5">
             <div class="max-w-5xl mx-auto px-6 lg:px-8 flex-grow flex flex-col justify-center w-full">
                 <div class="text-center mb-8">
@@ -437,6 +494,40 @@
                     goToSlide(currentSlide - 1);
                 }
             });
+
+            // --- Lógica da Calculadora de ROI ---
+            function calcularROI() {
+                const S = parseFloat(document.getElementById('calc-s').value) || 0;
+                const N = parseFloat(document.getElementById('calc-n').value) || 0;
+                const V = parseFloat(document.getElementById('calc-v').value) || 0;
+                const C = parseFloat(document.getElementById('calc-c').value) || 0;
+
+                const resCpt = document.getElementById('res-cpt');
+                const resTicketsIa = document.getElementById('res-tickets-ia');
+                const resEconomia = document.getElementById('res-economia');
+
+                if (V > 0 && S > 0 && N > 0) {
+                    const custoTotal = S * N;
+                    const cptAtual = custoTotal / V;
+                    const ticketsResolvidosIa = Math.round(V * (C / 100));
+                    const economiaPotencial = ticketsResolvidosIa * cptAtual;
+
+                    resCpt.innerText = cptAtual.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                    resTicketsIa.innerText = ticketsResolvidosIa.toLocaleString('pt-BR');
+                    resEconomia.innerText = economiaPotencial.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                } else {
+                    resCpt.innerText = 'R$ 0,00';
+                    resTicketsIa.innerText = '0';
+                    resEconomia.innerText = 'R$ 0,00';
+                }
+            }
+
+            // Adiciona os eventos para calcular em tempo real
+            ['calc-s', 'calc-n', 'calc-v', 'calc-c'].forEach(id => {
+                const element = document.getElementById(id);
+                if(element) element.addEventListener('input', calcularROI);
+            });
+            // ------------------------------------
 
             // Inicialização
             updateUI();
