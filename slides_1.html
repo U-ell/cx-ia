@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CX.ia - Apresentação Institucional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #0f172a; 
+            overflow: hidden; 
+        }
+        .gradient-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .donut-chart { transition: transform 0.3s ease; }
+        .donut-chart:hover { transform: scale(1.05); }
+        
+        .vr-profile { background-image: url(https://media.licdn.com/dms/image/v2/D4E03AQGS2Sf9xNTrtg/profile-displayphoto-scale_400_400/B4EZk5qyoKKYAk-/0/1757609146690?e=1778716800&v=beta&t=WqjXfRkauBXPfSIpDKpNyEsufpLRdlr98TN8ZO3Zbe8); background-size: cover; background-position: center;}
+        .wn-profile { background-image: url(https://media.licdn.com/dms/image/v2/D4D03AQEuw7ScR7wYSg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720732980209?e=1778716800&v=beta&t=bR4ai5eYXtmjLRPcautfAd2sDccRbn1aSpFMQhgU8uQ); background-size: cover; background-position: center;}
+        .gb-profile { background-image: url(https://raw.githubusercontent.com/U-ell/cx-ia/refs/heads/main/assets/gb.jpg); background-size: cover; background-position: center;}
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased h-screen w-screen relative">
+
+    <div class="fixed top-6 left-6 lg:left-8 z-50 flex items-center gap-2">
+        <div class="w-10 h-10 bg-lime-400 rounded-xl flex items-center justify-center text-slate-900 font-black text-xl shadow-lg shadow-lime-200/20">
+            CX
+        </div>
+        <span class="font-extrabold text-2xl tracking-tight text-white drop-shadow-md">.ia</span>
+    </div>
+
+    <div id="slider-container" class="flex transition-transform duration-700 ease-in-out h-full w-full">
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-y-auto hide-scrollbar pt-20 pb-24">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-lime-400/10 blur-[120px] rounded-full pointer-events-none"></div>
+            
+            <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-lime-400 border border-lime-400/30 rounded-full uppercase shadow-lg shadow-lime-400/10">
+                    O Futuro do Atendimento Educacional
+                </span>
+                <h1 class="text-5xl lg:text-7xl font-black text-white tracking-tight mb-6 leading-tight">
+                    Profissionalize sua <br>
+                    <span class="bg-gradient-to-r from-lime-300 to-lime-500 gradient-text">Operação de CX</span>
+                </h1>
+                <p class="text-2xl text-slate-300 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+                    Transformamos o atendimento via WhatsApp em uma operação estruturada, segura e baseada em dados reais.
+                </p>
+                <div class="inline-flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm text-slate-300">
+                    <svg class="w-5 h-5 text-lime-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <span>Controle total e Segurança para o seu negócio.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-slate-50 overflow-y-auto pt-20 pb-24 relative">
+            <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+            
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="w-16 h-16 bg-slate-900 rounded-2xl flex items-center justify-center text-lime-400 mb-6 shadow-xl">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">Adeus Trello. <br>Olá, Plataforma.</h2>
+                        <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                            Centralizamos os seus atendimentos. Acabe com o WhatsApp direto e os registros manuais. Seus operadores trabalharão em um ambiente unificado e seguro.
+                        </p>
+                        
+                        <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-lime-100 flex items-center justify-center flex-shrink-0 text-lime-600 mt-1">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-slate-900 mb-1">Protocolos e Histórico Seguro</h4>
+                                <p class="text-slate-500 text-sm">Geração automática de protocolos. Todas as conversas de diretores e professores ficam salvas na nuvem da empresa, protegendo os dados do cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-900 rounded-[2rem] p-8 shadow-2xl border border-slate-800 relative">
+                        <div class="flex gap-2 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                            <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                            <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center mb-4">
+                                <div class="h-6 bg-slate-800 rounded w-1/3"></div>
+                                <span class="text-lime-400 text-xs font-bold bg-lime-400/10 px-2 py-1 rounded">Ticket #10452</span>
+                            </div>
+                            <div class="h-20 bg-slate-800 rounded-xl w-full border border-slate-700/50 flex items-center px-6">
+                                <div class="w-10 h-10 bg-lime-400 rounded-full mr-4 flex-shrink-0 flex items-center justify-center text-slate-900 font-bold text-xs">OP</div>
+                                <div class="space-y-2 w-full">
+                                    <div class="h-3 bg-slate-700 rounded-full w-1/3"></div>
+                                    <div class="h-3 bg-slate-700 rounded-full w-4/5"></div>
+                                </div>
+                            </div>
+                            <div class="h-20 bg-slate-800 rounded-xl w-full border border-slate-700/50 flex items-center px-6">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full mr-4 flex-shrink-0 flex items-center justify-center text-white font-bold text-xs">PE</div>
+                                <div class="space-y-2 w-full">
+                                    <div class="h-3 bg-slate-700 rounded-full w-1/4"></div>
+                                    <div class="h-3 bg-slate-700 rounded-full w-2/3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-white overflow-y-auto pt-20 pb-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="inline-block px-4 py-1.5 mb-4 text-xs font-extrabold tracking-widest text-lime-700 bg-lime-100 rounded-full uppercase">Visão do Supervisor</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Gestão Baseada em Dados</h2>
+                    <p class="text-slate-500 text-lg">Mapeamos toda a sua operação. Você não precisa saber o que é CX (Customer Experience), nós configuramos e entregamos o controle nas mãos do seu supervisor.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors">
+                        <div class="w-12 h-12 bg-slate-900 text-lime-400 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Métricas de Performance</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Acompanhe TMA (Tempo Médio de Atendimento), volumetria de mensagens e horários de pico. Avalie cada um dos 12 operadores.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors">
+                        <div class="w-12 h-12 bg-slate-900 text-lime-400 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Painéis Personalizados</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Dashboards customizados que mostram exatamente onde estão os gargalos do suporte e quais municípios demandam mais atenção.</p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-lime-200 transition-colors">
+                        <div class="w-12 h-12 bg-slate-900 text-lime-400 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Pesquisa CSAT</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Mensuração automática de satisfação após cada atendimento. Saiba exatamente o que o secretário de educação ou diretor achou do suporte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-slate-100 overflow-y-auto pt-20 pb-24">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8 w-full">
+                <div class="bg-white rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
+                    <div class="p-8 pb-8 text-center">
+                        <span class="inline-block px-4 py-1.5 mb-4 text-xs font-extrabold tracking-widest text-lime-700 bg-lime-100 rounded-full uppercase">
+                            Integrações e Inteligência Artificial
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-4">
+                            Construído a 4 Mãos
+                        </h2>
+                        <p class="text-slate-500 font-medium max-w-3xl mx-auto mb-8">
+                            Nós não entregamos uma ferramenta vazia. Unimos nossa tecnologia ao conhecimento que você já possui nos seus "dicionários" descentralizados.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                                <h4 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-lime-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                    Base de Conhecimento IA
+                                </h4>
+                                <p class="text-sm text-slate-600 mb-4">Transformamos os relatórios específicos de cada município em uma biblioteca inteligente. A IA aprende as regras de negócio de cada prefeitura para triar e responder de forma instantânea, diminuindo a fila do humano.</p>
+                            </div>
+                            
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                                <h4 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-lime-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    Nível de Automação (APIs)
+                                </h4>
+                                <p class="text-sm text-slate-600 mb-4">A eficiência da IA é proporcional ao <span class="font-bold text-slate-800">que ela tem permissão para fazer</span>. Podemos conectar os robôs aos seus sistemas via API para consultar dados ou realizar ações de forma autônoma e segura.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 inline-flex items-center gap-3 px-6 py-3 bg-slate-900 rounded-full shadow-lg text-white font-semibold">
+                            <svg class="w-5 h-5 text-lime-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Estimativa média de Go-Live (Operação Rodando): 30 Dias
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-slate-900 text-white overflow-y-auto pt-20 pb-24 relative">
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-50 z-0 pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-lime-400 font-bold tracking-widest uppercase text-xs mb-3 block">Fim da Demora nas Respostas</span>
+                        <h2 class="text-4xl font-extrabold mb-4">Conheça o Copiloto</h2>
+                        <p class="text-slate-400 text-base mb-6 leading-relaxed">
+                            Sabemos que o atendimento humano está demorando. O Copiloto da CX.ia atua como um assistente invisível para os seus operadores, buscando as informações nos dicionários em milissegundos e sugerindo a resposta pronta.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-lime-400/10 flex items-center justify-center flex-shrink-0 text-lime-400">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold mb-1">Transbordo Inteligente</h4>
+                                    <p class="text-slate-400 text-sm">Resumo da triagem inicial para que o humano não precise reler todo o histórico.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-3xl p-6 shadow-2xl border border-slate-700">
+                        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-slate-700">
+                            <div class="flex gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <span class="ml-2 text-xs font-semibold text-slate-400 uppercase">Visão Exclusiva do Operador</span>
+                        </div>
+
+                        <div class="space-y-4 mb-4">
+                            <div class="flex gap-3 items-end">
+                                <div class="w-8 h-8 rounded-full bg-slate-600 flex items-center justify-center text-xs font-bold text-white">CLI</div>
+                                <div class="bg-slate-700 text-slate-200 px-4 py-2 rounded-2xl rounded-bl-none text-sm max-w-[80%]">
+                                    Sou o diretor de escola, como posso ter acesso aos materiais?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-lime-900/30 border border-lime-500/30 rounded-2xl p-4 mb-3">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-5 h-5 rounded bg-lime-500 flex items-center justify-center text-slate-900">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <span class="text-lime-400 font-bold text-xs">Sugestão Automática do Copiloto</span>
+                            </div>
+                            <p class="text-slate-300 text-xs italic mb-3">
+                                "Olá Diretor! Conforme nossa política para o município, o acesso aos materiais físicos..."
+                            </p>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-lime-500 text-slate-900 rounded-lg text-[10px] font-bold">Enviar ao Cliente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-white overflow-y-auto pt-20 pb-24">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-lime-600 bg-lime-100 rounded-full uppercase">
+                    Evolução Contínua
+                </span>
+                <h2 class="text-4xl font-bold text-slate-900 mb-6">Próximos Passos & Oportunidades</h2>
+                <p class="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto mb-12">
+                    A jornada de CX não para no WhatsApp. A estrutura que criaremos permitirá evoluções robustas e novos modelos de negócios.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 text-left hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-slate-900 text-lime-400 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Novos Canais de Atendimento</h3>
+                        <p class="text-slate-600 mb-4">Após a estabilização do WhatsApp, podemos expandir a plataforma para integrar <strong>Reclame Aqui</strong>, caixas de <strong>Ouvidoria</strong> e até a implementação de uma <strong>URA inteligente para 0800</strong>, unificando tudo em uma só tela.</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-800 rounded-3xl p-8 text-left hover:shadow-lg transition-shadow text-white relative overflow-hidden">
+                        <div class="absolute -right-6 -top-6 w-32 h-32 bg-lime-400/20 blur-2xl rounded-full"></div>
+                        <div class="w-12 h-12 bg-lime-400 text-slate-900 rounded-xl flex items-center justify-center mb-6 relative z-10">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Modelo Escalável de Parceria</h3>
+                        <p class="text-slate-300 relative z-10">Sabemos do seu forte relacionamento com outras prefeituras de Pernambuco. Uma vez validada na sua operação, esta mesma estrutura de CX pode ser ofertada como um <strong>serviço para os seus parceiros</strong>, gerando uma nova linha de valor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-screen h-screen flex-shrink-0 flex flex-col justify-between bg-slate-50 overflow-y-auto pt-20">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8 flex-grow flex flex-col justify-center w-full">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-slate-900 mb-4">Quem Somos?</h2>
+                    <p class="text-slate-500 text-lg max-w-2xl mx-auto">Aliamos conhecimento profundo de negócios e tecnologia para transformar o caos operacional em inteligência de atendimento.</p>
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-center gap-12 md:gap-20">
+                    <div class="text-center group">
+                        <div class="w-36 h-36 mx-auto rounded-full bg-slate-200 mb-4 overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform vr-profile">
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Vitor Romero</h3>
+                        <p class="text-lime-600 font-semibold text-sm mt-1">Especialista em CX</p>
+                    </div>
+
+                    <div class="text-center group">
+                        <div class="w-36 h-36 mx-auto rounded-full bg-slate-200 mb-4 overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform wn-profile">
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Wel Nunes</h3>
+                        <p class="text-lime-600 font-semibold text-sm mt-1">Gerente de Projetos/Produtos CX</p>
+                    </div>
+
+                    <div class="text-center group">
+                        <div class="w-36 h-36 mx-auto rounded-full bg-slate-200 mb-4 overflow-hidden border-4 border-white shadow-xl group-hover:scale-105 transition-transform gb-profile">
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Guilherme Bezerra</h3>
+                        <p class="text-lime-600 font-semibold text-sm mt-1">Gerente Comercial</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="bg-slate-900 py-8 border-t border-slate-800 text-center w-full flex-shrink-0">
+                <h2 class="text-2xl font-bold text-white mb-6">Vamos profissionalizar sua operação?</h2>
+                <button class="px-8 py-3 bg-lime-400 text-slate-900 font-bold rounded-full hover:bg-lime-300 transition-transform hover:scale-105 shadow-lg mb-4">
+                    Agendar Diagnóstico
+                </button>
+                <p class="text-slate-500 text-xs">© 2026 CX.ia. Todos os direitos reservados.</p>
+            </footer>
+        </section>
+
+    </div>
+
+    <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-slate-900/80 backdrop-blur-md px-6 py-3 rounded-full border border-slate-700/50 shadow-2xl z-50">
+        <button id="prevBtn" class="text-slate-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        
+        <div id="dots-container" class="flex gap-2">
+            </div>
+
+        <button id="nextBtn" class="text-slate-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('slider-container');
+            const slides = document.querySelectorAll('#slider-container > section');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dotsContainer = document.getElementById('dots-container');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            // Limpa o container caso já tenha algo (por precaução)
+            dotsContainer.innerHTML = '';
+
+            // Gera as bolinhas indicadoras
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.className = `w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === 0 ? 'bg-lime-400 w-6' : 'bg-slate-600 hover:bg-slate-500'}`;
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+            const dots = dotsContainer.querySelectorAll('button');
+
+            function updateUI() {
+                // Translada o contêiner (100vw por slide)
+                slider.style.transform = `translateX(-${currentSlide * 100}vw)`;
+                
+                // Atualiza estado dos botões
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === totalSlides - 1;
+
+                // Atualiza as bolinhas indicadoras
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.className = 'w-6 h-2.5 rounded-full bg-lime-400 transition-all duration-300';
+                    } else {
+                        dot.className = 'w-2.5 h-2.5 rounded-full bg-slate-600 hover:bg-slate-500 transition-all duration-300';
+                    }
+                });
+            }
+
+            function goToSlide(index) {
+                if (index >= 0 && index < totalSlides) {
+                    currentSlide = index;
+                    updateUI();
+                }
+            }
+
+            // Eventos de clique nos botões
+            prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+            // Navegação por teclado (Setas)
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    goToSlide(currentSlide + 1);
+                } else if (e.key === 'ArrowLeft') {
+                    goToSlide(currentSlide - 1);
+                }
+            });
+
+            // Inicialização
+            updateUI();
+        });
+    </script>
+</body>
+</html>
