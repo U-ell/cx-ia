@@ -27,6 +27,17 @@
         
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @keyframes popIn {
+            0% { opacity: 0; transform: translateY(10px) scale(0.95); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .msg-pop {
+            animation: popIn 0.3s ease-out forwards;
+        }
+        #interactive-chat {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body class="text-slate-800 antialiased h-screen w-screen relative">
@@ -113,6 +124,133 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+<section class="w-screen h-screen flex-shrink-0 flex items-center justify-center bg-slate-50 overflow-y-auto pt-20 pb-24 relative">
+            <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+                <div class="text-center mb-12">
+                    <span class="inline-block px-4 py-1.5 mb-4 text-xs font-extrabold tracking-widest text-lime-700 bg-lime-100 rounded-full uppercase">
+                        O Pacote Completo
+                    </span>
+                    <h2 class="text-4xl md:text-4xl font-black text-slate-900 mb-4">O que entregamos para sua operação?</h2>
+                    <!--p class="text-slate-500 text-lg max-w-2xl mx-auto">
+                        Uma solução de ponta a ponta que une tecnologia de vanguarda com excelência em processos.
+                    </p-->
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-lime-300 transition-all group flex flex-col">
+                        <div class="relative w-full h-36 rounded-2xl overflow-hidden mb-4 bg-slate-50 border border-slate-200 flex flex-col">
+                            <div class="absolute top-0 z-10 pointer-events-none bg-gradient-to-b from-slate-50 to-transparent h-4 w-full"></div>
+                            
+                            <div id="interactive-chat" class="w-full px-3 py-3 flex flex-col gap-3 overflow-y-auto hide-scrollbar flex-grow">
+                                </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">Agentes de IA</h3>
+                            <button id="next-msg-btn" class="bg-slate-800 text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md hover:bg-slate-700 transition-colors flex items-center gap-1.5 flex-shrink-0">
+                                Avançar
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                        </div>
+                        
+                        <p class="text-slate-600 text-sm leading-relaxed">Atendimento automatizado 24/7 treinado especificamente com as regras e dicionários do seu negócio.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-lime-300 transition-all group flex flex-col">
+                        
+                        <div class="relative w-full h-36 rounded-2xl overflow-hidden mb-5 bg-slate-100 border border-slate-200 flex items-center justify-center p-3">
+                            
+                            <svg class="absolute inset-0 w-full h-full text-slate-300 group-hover:text-lime-400 transition-colors duration-500" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <path class="transition-opacity group-hover:opacity-80" d="M22 35 C40 35, 40 50, 60 50" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+                                <path class="transition-opacity group-hover:opacity-80" d="M22 50 C40 50, 40 50, 60 50" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+                                <path class="transition-opacity group-hover:opacity-80" d="M22 65 C40 65, 40 50, 60 50" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3"/>
+                            </svg>
+
+                            <div class="relative z-10 flex items-center justify-between w-full h-full px-2 gap-4">
+                                
+                                <div class="flex flex-col gap-2.5 flex-shrink-0">
+                                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-slate-800 shadow-sm border border-slate-200 group-hover:border-lime-200 group-hover:scale-110 transition-all duration-300">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-slate-800 shadow-sm border border-slate-200 group-hover:border-lime-200 group-hover:scale-110 transition-all duration-300 group-hover:delay-75">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-slate-800 shadow-sm border border-slate-200 group-hover:border-lime-200 group-hover:scale-110 transition-all duration-300 group-hover:delay-150">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                </div>
+
+                                <div class="w-40 h-24 bg-white rounded-xl border border-slate-200 shadow-md flex flex-col p-2 group-hover:border-lime-300 transition-colors duration-300">
+                                    <div class="flex items-center gap-1.5 mb-2 pb-1.5 border-b border-slate-100 flex-shrink-0">
+                                        <div class="w-3 h-3 rounded-full bg-lime-400 group-hover:animate-pulse"></div> <div class="h-2.5 bg-slate-200 rounded-full w-16"></div> <div class="ml-auto flex gap-1.5 items-center">
+                                            <div class="w-1.5 h-1.5 rounded-full bg-slate-200"></div>
+                                            <div class="w-1.5 h-1.5 rounded-full bg-slate-200"></div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2 flex-grow overflow-hidden">
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-2.5 h-2.5 rounded-sm bg-lime-100 flex-shrink-0"></div>
+                                            <div class="h-2 bg-slate-100 rounded w-full"></div>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-2.5 h-2.5 rounded-sm bg-slate-100 flex-shrink-0"></div>
+                                            <div class="h-2 bg-slate-100 rounded w-4/5"></div>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-2.5 h-2.5 rounded-sm bg-lime-100 flex-shrink-0"></div>
+                                            <div class="h-2 bg-slate-100 rounded w-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Plataforma Omnichannel</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Fim do WhatsApp solto. Uma central única e segura para seus 12 operadores com geração automática de protocolos.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-lime-300 transition-all group">
+                        <div class="relative w-full h-36 rounded-2xl overflow-hidden mb-5 bg-slate-50 border border-slate-100 flex items-end justify-center gap-3 pb-4">
+                            <span class="text-slate-400 text-xs font-bold uppercase tracking-widest absolute top-4 left-4 z-10">Relatórios Personalizáveis</span>
+                            <div class="w-8 bg-lime-400 rounded-t-md h-12 group-hover:h-16 transition-all duration-500"></div>
+                            <div class="w-8 bg-slate-800 rounded-t-md h-20 group-hover:h-24 transition-all duration-500"></div>
+                            <div class="w-8 bg-lime-500 rounded-t-md h-16 group-hover:h-20 transition-all duration-500"></div>
+                            <div class="w-8 bg-slate-300 rounded-t-md h-10 group-hover:h-14 transition-all duration-500"></div>
+                            </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Dashboards Vivos</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Visualização de dados sob medida. Acompanhe a volumetria por município, horários de pico e CSAT em tempo real.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-lime-300 transition-all flex flex-col justify-center">
+                        <div class="w-12 h-12 bg-lime-100 text-lime-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Consultoria de CX</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Análise total da sua operação, definição de metas de qualidade e treinamento contínuo para sua equipe.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-lime-300 transition-all flex flex-col justify-center">
+                        <div class="w-12 h-12 bg-slate-900 text-lime-400 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Copiloto IA</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Um assistente que sugere respostas baseadas nos manuais para que seu atendente reduza o tempo de espera do cliente.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-3xl shadow-lg border border-slate-100 hover:border-lime-300 transition-all flex flex-col justify-center">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Automação (APIs)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Conexões seguras entre a IA e seus sistemas internos, permitindo que o robô faça consultas complexas automaticamente.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -483,7 +621,94 @@
             }
 
             [calcN, calcS, calcV, calcC].forEach(el => el.addEventListener('input', calculateROI));
+
             calculateROI();
+
+            // --- Lógica do Chat Interativo (Agentes de IA) ---
+            const interactiveChat = document.getElementById('interactive-chat');
+            const nextMsgBtn = document.getElementById('next-msg-btn');
+            
+            const chatMessages = [
+                { type: 'cli', text: 'Oi, esqueci a senha do portal da diretoria.' },
+                { type: 'ia', text: 'Olá! Sem problemas, vou te ajudar com isso.' },
+                { type: 'ia', text: 'Acabei de enviar um código de recuperação para o seu email oficial.' },
+                { type: 'cli', text: 'Chegou aqui! Já consegui redefinir.' },
+                { type: 'ia', text: 'Maravilha! Posso ajudar em mais alguma coisa?' },
+                { type: 'cli', text: 'Não, era só isso mesmo. Obrigado!' },
+                { type: 'ia', text: 'Por nada! Conte sempre com o nosso suporte.' }
+            ];
+
+            let currentMsgIndex = 0;
+            let autoPlayTimer;
+
+            if (interactiveChat && nextMsgBtn) {
+                const createBubble = (msg) => {
+                    const isAgent = msg.type === 'ia';
+                    return `
+                        <div class="flex w-full ${isAgent ? 'justify-start' : 'justify-end'} msg-pop">
+                            <div class="max-w-[85%] px-3 py-2 text-[10px] rounded-xl shadow-sm ${
+                                isAgent 
+                                ? 'bg-white border border-slate-200 text-slate-700 rounded-bl-none' 
+                                : 'bg-lime-100 border border-lime-200 text-lime-900 rounded-br-none font-medium'
+                            }">
+                                ${msg.text}
+                            </div>
+                        </div>
+                    `;
+                };
+
+                const renderNextMessage = () => {
+                    if (currentMsgIndex < chatMessages.length) {
+                        interactiveChat.insertAdjacentHTML('beforeend', createBubble(chatMessages[currentMsgIndex]));
+                        currentMsgIndex++;
+                        
+                        // Faz o scroll descer automaticamente
+                        setTimeout(() => {
+                            interactiveChat.scrollTop = interactiveChat.scrollHeight;
+                        }, 50);
+
+                        // Se acabou a conversa, muda o visual do botão
+                        if (currentMsgIndex >= chatMessages.length) {
+                            nextMsgBtn.innerHTML = `Reiniciar <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>`;
+                            nextMsgBtn.classList.replace('bg-slate-800', 'bg-lime-500');
+                            nextMsgBtn.classList.replace('hover:bg-slate-700', 'hover:bg-lime-400');
+                            nextMsgBtn.classList.replace('text-white', 'text-slate-900');
+                            clearTimeout(autoPlayTimer);
+                        } else {
+                            // Agenda a próxima mensagem automaticamente a cada 2.5s (se não houver clique)
+                            autoPlayTimer = setTimeout(renderNextMessage, 2500);
+                        }
+                    }
+                };
+
+                const resetChat = () => {
+                    interactiveChat.innerHTML = '';
+                    currentMsgIndex = 0;
+                    clearTimeout(autoPlayTimer);
+                    
+                    // Restaura o botão original
+                    nextMsgBtn.innerHTML = `Avançar <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>`;
+                    nextMsgBtn.classList.replace('bg-lime-500', 'bg-slate-800');
+                    nextMsgBtn.classList.replace('hover:bg-lime-400', 'hover:bg-slate-700');
+                    nextMsgBtn.classList.replace('text-slate-900', 'text-white');
+                    
+                    renderNextMessage(); // Toca a primeira msg
+                };
+
+                nextMsgBtn.addEventListener('click', () => {
+                    if (currentMsgIndex >= chatMessages.length) {
+                        resetChat();
+                    } else {
+                        // Se o usuário clicar, ele assume o controle e cancela o timer automático temporariamente
+                        clearTimeout(autoPlayTimer);
+                        renderNextMessage();
+                    }
+                });
+
+                // Inicia o chat pela primeira vez
+                resetChat();
+            }
+
             updateUI();
         });
     </script>
